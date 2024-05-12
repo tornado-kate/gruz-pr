@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+
+.vacancy{
+    &__item{
+        border-bottom: 1px solid $grey;
+    }
+    &__title{
+
+    }
+    &__content{
+
+    }
+}

@@ -28,13 +28,26 @@
     .container{
         position: relative;
     }
+    .footer-copy{
+        color: $grey;
+        font-size: 13px;
 
+        a{
+            color: $grey;
+            font-size: 13px;
+        }
+    }
+    &__text{
+        color: $grey;
+        font-size: 13px;
+    }
     &__brand {
         margin-bottom: 16px;
     }
     &__row {
         display: flex;
         justify-content: space-between;
+        gap: var(--gap);
 
         a {
             color: white;
@@ -45,17 +58,15 @@
             }
         }
     }
-
-    &__left,
-    &__right {
-        width: 50%;
+    &__left {
+        width: 350px;
     }
-
     &__bottom {
-        border-top: 1px solid #D9D9D9;
+        border-top: 1px solid $grey;
         padding-top: 30px;
         //color: $light-grey-2;
         font-size: 0.857rem;
+        margin-top: 30px;
 
         a {
             //color: $light-grey-2;
@@ -66,14 +77,26 @@
             }
         }
     }
-
+    .footer-widget{
+        &__title{
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        &__navigation li{
+            margin-bottom: 8px;
+        }
+    }
+    .footer-widget-menu{
+        display: flex;
+    }
     &__socials {
         display: flex;
 
-        .socials {
-            display: flex;
-            gap: 12px;
-            align-items: center;
+        &__title{
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 16px;
         }
     }
     &-copy{
@@ -158,15 +181,15 @@
 
 .socials {
     &__title {
-        //margin-bottom: 16px;
-        font-weight: 500;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 16px;
     }
     &__item {
-        display: block;
-        margin-bottom: 22px;
-
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
     }
-
     &__name {
         padding-left: 8px;
     }
