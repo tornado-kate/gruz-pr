@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as *;
+
+.news{
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    gap: var(--gap);
+
+    &__item{
+        display: grid;
+        grid-template: auto / 290px 1fr;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+    }
+    &__img{
+        display: block;
+
+        img{
+            height: 100%;
+        }
+    }
+    &__content{
+        background: $white;
+        padding: 48px 32px 33px;
+    }
+    &__title{
+        display: block;
+        color: $blue;
+        font-family: $font-secondary;
+        font-weight: 600;
+        font-size: 20px;
+
+        &:hover{
+            color: $yellow
+        }
+    }
+    &__date{
+        background: $blue;
+        color: $white;
+        font-size: 13px;
+        padding: 4px 12px;
+        display: inline-block;
+        margin-bottom: var(--space-l);
+    }
+}

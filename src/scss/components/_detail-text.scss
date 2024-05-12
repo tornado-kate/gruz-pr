@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as *;
+
+.detail-text{
+    p{
+        line-height: 1.66;
+        margin-bottom: 16px;
+    }
+    a{
+        text-decoration: none;
+        border-bottom: 2px solid $light-grey;
+        position: relative;
+        color: $black;
+
+        &:hover{
+            color: $yellow;
+
+            &:after{
+                left: 0;
+                width: 100%;
+                right: auto;
+            }
+        }
+        &:after{
+            transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: $yellow;
+        }
+    }
+    table{
+        line-height: 2;
+        border-bottom: 1px solid $light-grey;
+        margin-bottom: 30px;
+
+        tr td{
+            border-top: 1px solid $light-grey;
+            padding: 12px 20px;
+        }
+    }
+    ol {
+        counter-reset: myCounter;
+        padding-left: 24px;
+        margin-bottom: 30px;
+
+        li {
+            list-style: none;
+            position: relative;
+            padding-left: 24px;
+
+            &:before {
+                counter-increment: myCounter;
+                content: counter(myCounter) '. ';
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                text-align: center;
+            }
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+    ul {
+        padding-left: 24px;
+        margin-bottom: 30px;
+
+        li {
+            list-style: none;
+            position: relative;
+            line-height: 1.6;
+            padding-left: 24px;
+
+            &:before {
+                content: "\25cf";
+                display: inline-block;
+                position: absolute;
+                color: $yellow;
+                left: 0;
+                top: 0;
+                width: 8px;
+                height: 8px;
+                text-align: center;
+            }
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@use '../abstracts/variables' as *;
+
+.main-slider {
+    &__bg {
+        // position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        height: 535px;
+
+        &:after {
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            transition: all 0.2s;
+            -webkit-transition-delay: 0s;
+            -moz-transition-delay: 0s;
+            transition-delay: 0s;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            background: rgba(45, 53, 69, 0.7)
+        }
+    }
+    &__text {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        top: 82px;
+        left: 50px;
+        right: 50px;
+        color: $white;
+
+        h2 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .btn {
+            margin-top: 40px;
+        }
+        p {
+            width: 50%;
+            font-family: $font-secondary;
+            color: #eee;
+            font-size: 22px;
+            line-height: 1.3;
+        }
+    }
+    &__prev,
+    &__next {
+
+        &:after {
+            color: $white
+        }
+    }
+    &__pagination {
+        bottom: 16px;
+    }
+    .swiper-pagination-bullet {
+        background: #fff;
+        width: 12px;
+        height: 12px;
+    }
+    .swiper-pagination-bullet-active {
+        background: $yellow
+    }
+}

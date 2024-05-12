@@ -1,0 +1,173 @@
+@use '../abstracts/variables' as *;
+.c-contacts{
+    &__address{
+        margin-bottom: 24px;
+    }
+}
+.footer {
+    background: url(http://gruz-pr.ru/file/kanaty/8.jpg) no-repeat top;
+    background-size: cover;
+    width: 100%;
+    color: $white;
+    padding-top: 48px;
+    padding-bottom: 30px;
+    position: relative;
+
+    &:before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 0;
+    }
+    .container{
+        position: relative;
+    }
+
+    &__brand {
+        margin-bottom: 16px;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: white;
+
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__left,
+    &__right {
+        width: 50%;
+    }
+
+    &__bottom {
+        border-top: 1px solid #D9D9D9;
+        padding-top: 30px;
+        //color: $light-grey-2;
+        font-size: 0.857rem;
+
+        a {
+            //color: $light-grey-2;
+
+            &:hover {
+                //color: $light-grey-2;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+
+        .socials {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+    }
+    &-copy{
+        margin-top: 22px;
+
+        &__row{
+            display: flex;
+            gap: 90px;
+        }
+        a{
+            color: $white
+        }
+        &__item {
+
+        }
+    }
+    @media (max-width: $breakpoint-xl) {
+        padding-top: 46px;
+
+        &__brand {
+            margin-bottom: 26px;
+        }
+        &__bottom {
+            padding-top: 20px;
+        }
+        &__copy {
+            margin-top: 40px;
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        padding: 25px 0;
+
+        &__brand {
+            img {
+                max-width: 244px;
+            }
+        }
+        &__row {
+            flex-direction: column;
+        }
+        &__left,
+        &__right {
+            width: 100%;
+        }
+        &__brand {
+            margin-bottom: 18px;
+        }
+        &__socials {
+            flex-direction: column;
+            margin-top: 22px;
+
+            &__item {
+                font-size: 0.857rem;
+                margin-bottom: 16px;
+            }
+
+            &__title {
+                font-size: 0.857rem;
+            }
+
+            .socials {
+                width: 100%;
+            }
+
+            .socials + .socials {
+                margin-top: 28px;
+            }
+        }
+        &__bottom {
+            font-size: 0.714rem;
+            padding-top: 16px;
+        }
+        &__copy {
+            margin-top: 10px;
+
+            &-item {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+.socials {
+    &__title {
+        //margin-bottom: 16px;
+        font-weight: 500;
+    }
+    &__item {
+        display: block;
+        margin-bottom: 22px;
+
+    }
+
+    &__name {
+        padding-left: 8px;
+    }
+}

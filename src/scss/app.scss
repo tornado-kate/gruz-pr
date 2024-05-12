@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@use 'abstracts/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+@import 'vendors/reset';
+
+@import 'base/base';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+
+// Base stuff
+//@import 'base/fonts';
+//@import 'base/typography';
+
+// Components
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/detail-text';
+@import 'components/form-question';
+@import 'components/news';
+@import 'components/contacts';
+
+@import 'pages/index';
+@import 'pages/catalog';
+//@import 'components/pagination';
+//@import 'components/fancybox';
+
+// Base stuff

@@ -1,0 +1,30 @@
+$white:             #ffffff;
+$black:             #222;
+//$blue:              #05103B;
+$blue:              #414c64;
+$yellow:            #ffc107;
+$grey:              #777777;
+$light-grey:        #dee2e6;
+
+$breakpoint-xxl:    1359.98px;
+$breakpoint-xl:     1199.98px;
+$breakpoint-lg:     991.98px;
+$breakpoint-md:     767.98px;
+$breakpoint-xs:     359.98px;
+
+$font-primary:      'Roboto',sans-serif;
+$font-secondary:    'Raleway', Arial, sans-serif;
+
+:root {
+    --transition-base: .3s ease-out;
+    --box-shadow-hover: 0 0 28px rgba(154,163,187,.2);
+    --border-radius: 4px;
+    --bs-border-color: #dee2e6;
+    --gap: 30px;
+    --space-xs: 6px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 18px;
+    --space-base: 20px;
+    --space-xl: 28px;
+}
