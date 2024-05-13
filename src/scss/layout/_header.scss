@@ -166,16 +166,6 @@
         &:hover{
             color: $yellow
         }
-        &:after{
-            right: 30px;
-            position: absolute;
-            top: 13px;
-            content: '';
-            background: url("../../images/icons/arrow-right.svg");
-            width: 6px;
-            height: 11px;
-            display: inline-block;
-        }
     }
     &__item{
 
@@ -189,6 +179,19 @@
                     visibility: visible;
                     transform: translateY(0);
                     opacity: 1;
+                }
+            }
+            .submenu__link{
+
+                &:after{
+                    right: 30px;
+                    position: absolute;
+                    top: 13px;
+                    content: '';
+                    background: url("../../images/icons/arrow-right.svg");
+                    width: 6px;
+                    height: 11px;
+                    display: inline-block;
                 }
             }
         }
