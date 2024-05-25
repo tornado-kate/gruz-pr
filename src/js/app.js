@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         options.forEach(option => {
             option.addEventListener('click', () => {
+                const codeCity = option.dataset.code
+                const headerContacts = document.querySelectorAll('.header__contacts-item')
                 selected.innerText = option.innerText
                 select.classList.remove("dropdown__select--is-active")
                 menu.classList.remove("dropdown__menu--is-open")
@@ -43,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     option.classList.remove("dropdown__item--is-active")
                 })
                 option.classList.add('dropdown__item--is-active')
+                headerContacts.forEach(el => {
+                    el.style.display = 'none'
+                    document.querySelector(`.header__contacts-item--${codeCity}`).style.display = 'block'
+                })
             })
         })
     }

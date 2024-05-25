@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as *;
 
 .header {
-    background: white;
+    background: $white;
 
     &__row{
         display: flex;
@@ -29,23 +29,26 @@
         border: 0 !important;
         padding: 10px 15px !important;
     }
+    &__contacts {
+
+        &-item:not(:first-child){
+            display: none;
+        }
+    }
     &__phone{
         display: block;
         font-size: 24px;
         font-weight: 500;
         color: $yellow;
         margin-bottom: var(--space-xs);
+        transition: var(--transition-base);
+
+        &:hover{
+            color: $yellow-light
+        }
     }
     &__mail{
         color: $grey;
-    }
-    &__callback{
-        border-bottom: 2px solid #c8cedc;
-        color: #6c7c9f;
-
-        &:hover{
-            border-color: #6c7c9f;
-        }
     }
     &-burger{
         display: none;
@@ -68,12 +71,12 @@
         gap: 60px;
     }
     &__link{
-        font-family: "Raleway", Arial, sans-serif;
+        font-family: $font-secondary;
         letter-spacing: 1px;
         position: relative;
         display: block;
         padding: 25px 20px;
-        color: #ffffff;
+        color: $white;
         font-weight: 700;
         font-size: 13px;
         text-transform: uppercase;
@@ -89,7 +92,6 @@
             width: 0;
             height: 3px;
             content: "";
-            -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
             background-color: $yellow;
         }
@@ -142,8 +144,7 @@
     transform: translateY(50px);
     opacity: 0;
     border-bottom: 3px solid $yellow;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0 10px 37px rgba(0, 0, 0, 0.07);
+    background-color: $white;
     box-shadow: 0 10px 37px rgba(0, 0, 0, 0.07);
 
     .submenu {
@@ -161,7 +162,7 @@
         display: block;
         padding: 11px 25px;
         padding-right: 40px;
-        color: #999;
+        color: $grey;
 
         &:hover{
             color: $yellow
@@ -238,7 +239,6 @@
     &__link{
         line-height: 1.2;
         padding: 5px 0;
-        -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         color: #999;
         display: block;
@@ -260,7 +260,6 @@
                 width: 5px;
                 height: 5px;
                 content: "";
-                -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
                 border-radius: 50%;
                 background-color: #d8d8d8;
