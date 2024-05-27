@@ -61,6 +61,25 @@
         align-items: center;
         justify-content: space-between;
     }
+    @media (max-width: $breakpoint-xxl) {
+        &__search {
+            width: 280px;
+        }
+        &__right {
+            column-gap: 60px;
+        }
+    }
+    @media (max-width: $breakpoint-xl) {
+        &__search {
+            width: 240px;
+        }
+        &__right {
+            column-gap: 40px;
+        }
+        &__callback{
+            padding: 10px 25px;
+        }
+    }
 }
 
 .menu {
@@ -127,6 +146,19 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+    @media (max-width: $breakpoint-xxl) {
+        &__nav {
+            gap: 40px;
+        }
+        &__link {
+            padding: 25px 16px;
+        }
+    }
+    @media (max-width: $breakpoint-xxl) {
+        &__nav {
+            gap: 30px;
         }
     }
 }

@@ -3,7 +3,7 @@
 .contact-elem {
     display: grid;
     grid-template-columns: 230px auto 150px 150px;
-    gap: 30px;
+    gap: var(--gap);
     border-bottom: 1px solid $light-grey;
     padding: 20px;
     padding-left: 0;
@@ -15,18 +15,32 @@
         font-weight: 500;
         line-height: 22px;
         color: $black;
-        width: 230px;
     }
     &__time {
-        font-size: 13px;
+        font-size: 14px;
     }
     &__phone{
         display: block;
         color: $yellow;
         font-weight: 500;
+
+        &:hover{
+            color: $yellow-light
+        }
     }
     &__mail{
         display: inline-block;
         margin-top: 6px;
+    }
+    &__location{
+        p:not(:last-child){
+            margin-bottom: var(--space-s);
+        }
+    }
+    @media (max-width: $breakpoint-xxl) {
+        grid-template-columns: 210px auto 150px 150px;
+    }
+    @media (max-width: $breakpoint-xl) {
+        grid-template-columns: 210px auto 140px 140px;
     }
 }

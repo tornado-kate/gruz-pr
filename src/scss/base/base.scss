@@ -19,17 +19,12 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1500px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%
+    max-width: 1320px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
 }
-@media (max-width: 1460px) {
-    .container {
-        max-width:1260px
-    }
-}
-@media (max-width: 1359.98px) {
+@media (max-width: 1399.98px) {
     .container {
         max-width: 1140px
     }
