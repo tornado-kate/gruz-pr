@@ -200,42 +200,62 @@
         </nav>
         <h1>Новости и акции</h1>
         <div class="news">
-            <a href="./news-detail.html" class="news__item">
-                <img src="./images/blog-01.jpg" class="news__img img-fluid" alt="">
-                <div class="news__content">
-                    <div class="blog-text">
-                        <div class="news__date">14.04.2024</div>
-                        <div class="news__title">Шакл синтетический (софт-шакл) всегда в наличии!</div>
+            <div class="news__row">
+                <a href="./news-detail.html" class="news__item">
+                    <img src="./images/blog-01.jpg" class="news__img img-fluid" alt="">
+                    <div class="news__content">
+                        <div class="blog-text">
+                            <div class="news__date">14.04.2024</div>
+                            <div class="news__title">Шакл синтетический (софт-шакл) всегда в наличии!</div>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="./news-detail.html" class="news__item">
-                <img src="./images/blog-02.jpg" class="news__img img-fluid" alt="">
-                <div class="news__content">
-                    <div class="blog-text">
-                        <div class="news__date">14.04.2024</div>
-                        <div class="news__title">Люверсы из нержавейки снова в продаже!</div>
+                </a>
+                <a href="./news-detail.html" class="news__item">
+                    <img src="./images/blog-02.jpg" class="news__img img-fluid" alt="">
+                    <div class="news__content">
+                        <div class="blog-text">
+                            <div class="news__date">14.04.2024</div>
+                            <div class="news__title">Люверсы из нержавейки снова в продаже!</div>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="./news-detail.html" class="news__item">
-                <img src="./images/blog-02.jpg" class="news__img img-fluid" alt="">
-                <div class="news__content">
-                    <div class="blog-text">
-                        <div class="news__date">14.04.2024</div>
-                        <div class="news__title">Люверсы из нержавейки снова в продаже!</div>
+                </a>
+                <a href="./news-detail.html" class="news__item">
+                    <img src="./images/blog-02.jpg" class="news__img img-fluid" alt="">
+                    <div class="news__content">
+                        <div class="blog-text">
+                            <div class="news__date">14.04.2024</div>
+                            <div class="news__title">Люверсы из нержавейки снова в продаже!</div>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="./news-detail.html" class="news__item">
-                <img src="./images/blog-01.jpg" class="news__img img-fluid" alt="">
-                <div class="news__content">
-                    <div class="blog-text">
-                        <div class="news__date">14.04.2024</div>
-                        <div class="news__title">Шакл синтетический (софт-шакл) всегда в наличии!</div>
+                </a>
+                <a href="./news-detail.html" class="news__item">
+                    <img src="./images/blog-01.jpg" class="news__img img-fluid" alt="">
+                    <div class="news__content">
+                        <div class="blog-text">
+                            <div class="news__date">14.04.2024</div>
+                            <div class="news__title">Шакл синтетический (софт-шакл) всегда в наличии!</div>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+            <div class="news__pagination">
+                <ul class="pagination">
+                    <li class="pagination__item disabled">
+                        <span>
+                            <svg class="svg-arrow-left" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use></svg>
+                        </span>
+                    </li>
+                    <li class="pagination__item pagination__item--active">
+                        <a class="pagination__link" href="#" data-page="0">1</a></li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#" data-page="1">2</a></li>
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#" data-page="1">
+                            <svg class="svg-arrow-right" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </main>
@@ -371,6 +391,20 @@
         </div>
     </div>
 </footer>
+<div class="svg-root">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="icon-search" viewBox="0 0 18 19" fill="none">
+            <ellipse cx="8.16667" cy="8.16667" rx="6.66667" ry="6.66667" stroke="#545454" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></ellipse>
+            <path d="M12.75 13.1317L16.9167 17.2984" stroke="#545454" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 9 14">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.70718 13.7071L0.292969 12.2929L5.58586 7.00002L0.292968 1.70712L1.70718 0.292911L8.41429 7.00002L1.70718 13.7071Z"></path>
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 9 14">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29282 0.292908L8.70703 1.70712L3.41414 7.00001L8.70703 12.2929L7.29282 13.7071L0.585709 7.00001L7.29282 0.292908Z"></path>
+        </symbol>
+    </svg>
+</div>
 <script src="./dist/js/app.js"></script>
 </body>
 </html>
