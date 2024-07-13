@@ -33,7 +33,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="btn btn-secondary header__callback">Заказать звонок</a>
+                <a data-fancybox="ajax" data-type="ajax" href="./ajax/callback.html" class="btn btn-secondary header__callback">Заказать звонок</a>
                 <div class="header__contacts">
                     <!-- по умолчанию контакты НН -->
                     <div class="header__contacts-item header__contacts-item--nn">
@@ -306,22 +306,22 @@
                 <form action="#" class="form-validation" novalidate="" autocomplete="off">
                     <div class="form-question__row">
                         <div class="form-group">
-                            <input id="name663f6b2f66ab2" type="text" class="form-control" placeholder="Имя*" name="name" value="" autocomplete="off" data-field="name" required="" pattern="^[А-Яа-яЁё\s]+$">
+                            <input id="name663f6b2f66ab2" type="text" class="form-control" placeholder="Имя*" name="name" value="" autocomplete="off" data-field="name" required="">
                             <span class="form-error"></span>
                         </div>
                         <div class="form-group">
-                            <input id="phone663f6b2f66ad2" type="tel" class="form-control" placeholder="Телефон*" name="phone" value="" autocomplete="off" data-field="phone" required="" pattern="^(8|\+7)[\s(-]*\d{3}[\s)-]*\d{3}([\s*-]*\d{2}){2}$">
+                            <input id="phone663f6b2f66ad2" type="tel" class="form-control" placeholder="Телефон*" name="phone" value="" autocomplete="off" data-field="phone" required="">
                             <span class="form-error"></span>
                         </div>
                         <div class="form-group">
-                            <input id="email663f6b2f66af1" type="email" class="form-control" placeholder="E-mail" name="email" value="" autocomplete="off" data-field="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                            <input id="email663f6b2f66af1" type="email" class="form-control" placeholder="E-mail" name="email" value="" autocomplete="off" data-field="email">
                             <span class="form-error"></span>
                         </div>
                     </div>
                     <div class="form-footer">
                         <div class="form-footer__accept">
-                            Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a>
-                            <br>и соглашаетесь с <a href="">политикой конфиденциальности</a>
+                            Нажимая на кнопку, вы даете согласие на <a href="#" class="link">обработку персональных данных</a>
+                            <br>и соглашаетесь с <a href="#" class="link">политикой конфиденциальности</a>
                         </div>
                         <button class="btn btn-primary" type="submit">Отправить</button>
                     </div>

@@ -55,6 +55,7 @@ a{
     border-bottom: 2px solid $light-grey;
     position: relative;
     color: $black;
+    display: inline-block;
 
     &:hover{
         color: $yellow;
@@ -362,5 +363,112 @@ b{
     overflow: hidden;
     position: absolute;
     width: 0;
+}
+.popup{
+    &__title{
+        margin-bottom: 28px;
+    }
+    @media (max-width: $breakpoint-xl){
+        &__footer{
+            justify-content: space-between;
+
+            .form-check__label{
+                line-height: 22px;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-md){
+        &__title{
+            font-size: 1.286rem;
+        }
+        &__footer{
+            .form-check__label{
+                line-height: 15px;
+            }
+        }
+    }
+}
+.fancybox{
+
+    &__container{
+        .fancybox__toolbar{
+            background: transparent !important;
+        }
+        .fancybox__backdrop {
+            background: rgba(51, 51, 51, 0.5);
+        }
+        .fancybox__content{
+            width: 636px;
+            padding: 28px 20px 32px;
+        }
+        .btn--fancy-close{
+            pointer-events: all;
+            padding: 0;
+            border-radius: 50%;
+            position: absolute;
+            top: 24px;
+            right: 20px;
+            border: 0;
+
+            svg {
+                pointer-events: none;
+            }
+        }
+        .fancy-dialog{
+            width: 636px;
+            padding: 32px;
+
+            .btn--fancy-close{
+                right: 16px;
+            }
+        }
+        @media (max-width: $breakpoint-xl){
+            .fancybox__content,
+            .fancy-dialog{
+                width: 636px;
+            }
+            .fancy-dialog{
+                .btn--fancy-close{
+                    right: 16px;
+                }
+            }
+        }
+        @media (max-width: $breakpoint-md){
+            .fancybox__content{
+                width: 100%;
+                border-radius: 0;
+                padding: 30px 20px;
+            }
+            &.popup--html{
+                .fancybox__content{
+                    width: 100%;
+                }
+                .popup__content{
+                    padding-top: 22px;
+                }
+                .popup__title{
+                    margin-bottom: 0;
+                }
+            }
+            .btn--fancy-close{
+                top: 20px;
+                right: 20px;
+
+                svg{
+                    width: 20px;
+                    height: 21px;
+                }
+            }
+            .fancy-dialog{
+                width: 100%;
+                border-radius: 0;
+                padding: 20px;
+
+                .btn--fancy-close{
+                    right: 20px;
+                }
+            }
+        }
+    }
 }
 

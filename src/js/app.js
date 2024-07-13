@@ -1,10 +1,37 @@
 import Swiper from 'swiper';
-import {Navigation, Pagination} from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+import { formInit } from './components/form-helper';
+
 document.addEventListener('DOMContentLoaded', () => {
+   let forms = document.querySelectorAll('.form-validation');
+    forms.forEach(function (form, index) {
+        formInit(form)
+    })
+
+    Fancybox.bind('[data-fancybox="ajax"]', {
+        groupAttr: false,
+        mainClass: 'popup',
+        autoFocus: false,
+        dragToClose: false,
+        closeButton: false,
+        Hash: false,
+        //type: 'ajax',
+        /*afterShow: function (instance, current) {
+            const popupForm = $(current.$content).find('form')[0]
+            formInit(popupForm, function () {
+                instance.close(true)
+            })
+        }*/
+    })
+
+
     const mainSlider = new Swiper('.main-slider', {
         modules: [Navigation, Pagination],
         slidesPerView: 1,
